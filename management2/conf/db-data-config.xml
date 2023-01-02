@@ -1,0 +1,11 @@
+<dataConfig> 
+  <dataSource driver="com.mysql.jbdc.Driver" url="jdbc:mysql://localhost:3700/management" user="root" password="1"/> 
+  <document> 
+    <entity name="task" 
+            query="select * from main_task"
+            deltaQuery="select id from main_task where last_modified > '${dataimporter.last_index_time}'"> 
+      <field column="id" name="id" />
+      <field column="title" name="title" />
+    </entity>      
+  </document>
+</dataConfig>
