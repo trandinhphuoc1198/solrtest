@@ -1,11 +1,13 @@
 <dataConfig> 
-  <dataSource driver="com.mysql.jbdc.Driver" url="jdbc:mysql://localhost:3700/management" user="root" password="1"/> 
+  <dataSource driver="com.mysql.jdbc.Driver" url="jdbc:mysql://172.25.197.100:3700/management" user="root" password="1"/> 
   <document> 
     <entity name="task" 
             query="select * from main_task"
-            deltaQuery="select id from main_task where last_modified > '${dataimporter.last_index_time}'"> 
+            deltaQuery="select id from main_task where updated_date > '${dataimporter.last_index_time}'"
+            deltaImportQuery="select * from main_task where id=${dataimporter.delta.id}"
+            deletedPkQuery ="SELECT id FROM main_task WHERE spent_time = 999" >
       <field column="id" name="id" />
-      <field column="title" name="title" />
+      <field column="task_title" name="title" />
     </entity>      
   </document>
 </dataConfig>

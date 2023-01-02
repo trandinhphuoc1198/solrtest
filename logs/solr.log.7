@@ -1,0 +1,866 @@
+2023-01-02 13:54:30.170 INFO  (main) [   ] o.e.j.u.log Logging initialized @891ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-01-02 13:54:30.350 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 11.0.17+8
+2023-01-02 13:54:30.363 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///opt/solr-8.11.2/server/contexts/] at interval 0
+2023-01-02 13:54:30.549 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2023-01-02 13:54:30.560 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2023-01-02 13:54:30.560 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2023-01-02 13:54:30.562 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2023-01-02 13:54:30.631 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2023-01-02 13:54:30.636 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.11.2
+2023-01-02 13:54:30.636 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2023-01-02 13:54:30.636 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /opt/solr
+2023-01-02 13:54:30.636 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2023-01-02T13:54:30.636938Z
+2023-01-02 13:54:30.675 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /var/solr/data
+2023-01-02 13:54:30.676 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /var/solr/data/solr.xml
+2023-01-02 13:54:30.762 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c, but no JMX reporters were configured - adding default JMX reporter.
+2023-01-02 13:54:31.249 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2023-01-02 13:54:31.400 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@38320e34[provider=null,keyStore=null,trustStore=null]
+2023-01-02 13:54:31.401 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@38320e34[provider=null,keyStore=null,trustStore=null]
+2023-01-02 13:54:31.578 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@aa4d8cc[provider=null,keyStore=null,trustStore=null]
+2023-01-02 13:54:31.578 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@aa4d8cc[provider=null,keyStore=null,trustStore=null]
+2023-01-02 13:54:31.622 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2023-01-02 13:54:31.769 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2023-01-02 13:54:31.777 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2023-01-02 13:54:31.842 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c
+2023-01-02 13:54:31.843 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c
+2023-01-02 13:54:31.845 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c
+2023-01-02 13:54:31.875 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/solr/data
+2023-01-02 13:54:31.875 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [management3]
+2023-01-02 13:54:31.924 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.SolrResourceLoader Added 19 libs to classloader, from paths: [/opt/solr/dist, /opt/solr/dist/solrj-lib, /opt/solr/dist/test-framework, /var/solr/data/management2/lib]
+2023-01-02 13:54:31.944 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@19fe4644{/solr,file:///opt/solr-8.11.2/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-8.11.2/server/solr-webapp/webapp}
+2023-01-02 13:54:31.968 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@781f10f2{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2023-01-02 13:54:31.969 INFO  (main) [   ] o.e.j.s.Server Started @2691ms
+2023-01-02 13:54:32.097 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-01-02 13:54:32.148 WARN  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-01-02 13:54:32.199 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.s.IndexSchema Schema name=default-config
+2023-01-02 13:54:32.485 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2023-01-02 13:54:32.515 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.CoreContainer Creating SolrCore 'management3' using configuration from instancedir /var/solr/data/management2, trusted=true
+2023-01-02 13:54:32.542 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.management3' (registry 'solr.core.management3') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c
+2023-01-02 13:54:32.555 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.SolrCore [[management3] ] Opening new SolrCore at [/var/solr/data/management2], dataDir=[/var/solr/data/management2/data/]
+2023-01-02 13:54:33.010 WARN  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.h.d.DataImportHandler Data Import Handler is deprecated as of Solr 8.6. See SOLR-14066 for more details.
+2023-01-02 13:54:33.028 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-01-02 13:54:33.028 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-01-02 13:54:33.040 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-01-02 13:54:33.040 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-01-02 13:54:33.144 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/management2/conf
+2023-01-02 13:54:33.158 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2023-01-02 13:54:33.165 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxQueryFrequency=0.01,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4}
+2023-01-02 13:54:33.180 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-01-02 13:54:33.190 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1753919178082877440
+2023-01-02 13:54:33.194 INFO  (searcherExecutor-15-thread-1-processing-x:management3) [   x:management3] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-01-02 13:54:33.195 INFO  (searcherExecutor-15-thread-1-processing-x:management3) [   x:management3] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-01-02 13:54:33.205 INFO  (searcherExecutor-15-thread-1-processing-x:management3) [   x:management3] o.a.s.c.SolrCore [management3]  Registered new searcher autowarm time: 0 ms
+2023-01-02 13:54:34.881 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672667674860} status=0 QTime=9
+2023-01-02 13:54:34.883 INFO  (qtp1350751778-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667674819} status=0 QTime=10
+2023-01-02 13:54:34.888 INFO  (qtp1350751778-44) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1672667674860} status=0 QTime=16
+2023-01-02 13:54:34.900 INFO  (qtp1350751778-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667674819} status=0 QTime=27
+2023-01-02 13:54:34.924 INFO  (qtp1350751778-21) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667674860} status=0 QTime=0
+2023-01-02 13:54:36.195 INFO  (qtp1350751778-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667676140} status=0 QTime=0
+2023-01-02 13:54:36.196 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1672667676184} status=0 QTime=0
+2023-01-02 13:54:36.196 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672667676184} status=0 QTime=0
+2023-01-02 13:54:36.207 INFO  (qtp1350751778-44) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667676140} status=0 QTime=10
+2023-01-02 13:54:36.212 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667676184} status=0 QTime=0
+2023-01-02 13:54:37.614 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 13:54:37.614 INFO  (qtp1350751778-44) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672667677603} status=0 QTime=0
+2023-01-02 13:54:37.615 INFO  (qtp1350751778-20) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1672667677603} status=0 QTime=0
+2023-01-02 13:54:37.623 INFO  (qtp1350751778-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=9
+2023-01-02 13:54:37.631 INFO  (qtp1350751778-45) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:55:17.883 INFO  (qtp1350751778-44) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:55:17.894 INFO  (qtp1350751778-44) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:55:17.907 INFO  (Thread-17) [   ] o.a.s.h.d.DataImporter Starting Full Import
+2023-01-02 13:55:17.907 INFO  (qtp1350751778-44) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=26
+2023-01-02 13:55:17.919 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:55:17.928 WARN  (Thread-17) [   ] o.a.s.h.d.SimplePropertiesWriter Unable to read: dataimport.properties
+2023-01-02 13:55:17.976 INFO  (Thread-17) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:55:18.379 INFO  (Thread-17) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 402
+2023-01-02 13:55:18.640 INFO  (Thread-17) [   ] o.a.s.h.d.DocBuilder Import completed successfully
+2023-01-02 13:55:18.767 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-01-02 13:55:18.773 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.SolrCore [management3]  Registered new searcher autowarm time: 5 ms
+2023-01-02 13:55:18.778 WARN  (Thread-17) [   ] o.a.s.h.d.SimplePropertiesWriter Unable to read: dataimport.properties
+2023-01-02 13:55:18.779 INFO  (Thread-17) [   ] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2023-01-02 13:55:18.779 INFO  (Thread-17) [   ] o.a.s.h.d.DocBuilder Time taken = 0:0:0.850
+2023-01-02 13:55:18.779 INFO  (Thread-17) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=26{add=[99 (1753919225567641600), 102 (1753919225626361856), 103 (1753919225628459008), 244 (1753919225629507584), 5047 (1753919225632653312), 5116 (1753919225634750464), 5190 (1753919225635799040), 5259 (1753919225637896192), 5260 (1753919225638944768), 5261 (1753919225641041920), ... (141 adds)],commit=} 0 898
+2023-01-02 13:55:20.335 INFO  (qtp1350751778-44) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:55:36.928 INFO  (qtp1350751778-26) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:55:36.930 INFO  (qtp1350751778-26) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:55:36.931 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=3
+2023-01-02 13:55:36.931 INFO  (Thread-18) [   ] o.a.s.h.d.DataImporter Starting Full Import
+2023-01-02 13:55:36.935 INFO  (Thread-18) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:55:36.938 INFO  (Thread-18) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:55:36.944 INFO  (qtp1350751778-44) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:55:36.985 INFO  (Thread-18) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 46
+2023-01-02 13:55:37.071 INFO  (Thread-18) [   ] o.a.s.h.d.DocBuilder Import completed successfully
+2023-01-02 13:55:37.130 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-01-02 13:55:37.138 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.SolrCore [management3]  Registered new searcher autowarm time: 0 ms
+2023-01-02 13:55:37.146 INFO  (Thread-18) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:55:37.147 INFO  (Thread-18) [   ] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2023-01-02 13:55:37.147 INFO  (Thread-18) [   ] o.a.s.h.d.DocBuilder Time taken = 0:0:0.211
+2023-01-02 13:55:37.147 INFO  (Thread-18) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=3{add=[99 (1753919244988317696), 102 (1753919244992512000), 103 (1753919244992512001), 244 (1753919244993560576), 5047 (1753919244994609152), 5116 (1753919244995657728), 5190 (1753919244997754880), 5259 (1753919244997754881), 5260 (1753919244998803456), 5261 (1753919244999852032), ... (141 adds)],commit=} 0 220
+2023-01-02 13:55:45.425 INFO  (qtp1350751778-26) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:55:45.427 INFO  (qtp1350751778-26) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:55:45.428 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=3
+2023-01-02 13:55:45.428 INFO  (Thread-19) [   ] o.a.s.h.d.DataImporter Starting Full Import
+2023-01-02 13:55:45.435 INFO  (Thread-19) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:55:45.438 INFO  (Thread-19) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:55:45.440 INFO  (qtp1350751778-44) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:55:45.475 INFO  (Thread-19) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 36
+2023-01-02 13:55:45.534 INFO  (Thread-19) [   ] o.a.s.h.d.DocBuilder Import completed successfully
+2023-01-02 13:55:45.585 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-01-02 13:55:45.588 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.SolrCore [management3]  Registered new searcher autowarm time: 0 ms
+2023-01-02 13:55:45.594 INFO  (Thread-19) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:55:45.595 INFO  (Thread-19) [   ] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2023-01-02 13:55:45.595 INFO  (Thread-19) [   ] o.a.s.h.d.DocBuilder Time taken = 0:0:0.159
+2023-01-02 13:55:45.595 INFO  (Thread-19) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=3{add=[99 (1753919253885485056), 102 (1753919253887582208), 103 (1753919253887582209), 244 (1753919253888630784), 5047 (1753919253888630785), 5116 (1753919253889679360), 5190 (1753919253890727936), 5259 (1753919253890727937), 5260 (1753919253891776512), 5261 (1753919253891776513), ... (141 adds)],commit=} 0 170
+2023-01-02 13:55:46.515 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:55:47.258 INFO  (qtp1350751778-44) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:55:47.260 INFO  (qtp1350751778-44) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:55:47.261 INFO  (Thread-20) [   ] o.a.s.h.d.DataImporter Starting Full Import
+2023-01-02 13:55:47.261 INFO  (qtp1350751778-44) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:55:47.266 INFO  (Thread-20) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:55:47.268 INFO  (Thread-20) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:55:47.272 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:55:47.306 INFO  (Thread-20) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 37
+2023-01-02 13:55:47.360 INFO  (Thread-20) [   ] o.a.s.h.d.DocBuilder Import completed successfully
+2023-01-02 13:55:47.407 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-01-02 13:55:47.410 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.SolrCore [management3]  Registered new searcher autowarm time: 0 ms
+2023-01-02 13:55:47.415 INFO  (Thread-20) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:55:47.415 INFO  (Thread-20) [   ] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2023-01-02 13:55:47.416 INFO  (Thread-20) [   ] o.a.s.h.d.DocBuilder Time taken = 0:0:0.149
+2023-01-02 13:55:47.416 INFO  (Thread-20) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=2{add=[99 (1753919255806476288), 102 (1753919255808573440), 103 (1753919255809622016), 244 (1753919255809622017), 5047 (1753919255810670592), 5116 (1753919255810670593), 5190 (1753919255811719168), 5259 (1753919255811719169), 5260 (1753919255811719170), 5261 (1753919255812767744), ... (141 adds)],commit=} 0 158
+2023-01-02 13:55:47.690 INFO  (qtp1350751778-44) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:01.066 INFO  (qtp1350751778-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 13:56:01.073 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=6
+2023-01-02 13:56:02.298 INFO  (qtp1350751778-19) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672667761050} hits=141 status=0 QTime=24
+2023-01-02 13:56:02.343 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 13:56:02.346 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672667761050} hits=141 status=0 QTime=3
+2023-01-02 13:56:02.350 INFO  (qtp1350751778-44) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=7
+2023-01-02 13:56:25.178 INFO  (qtp1350751778-19) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR} hits=141 status=0 QTime=0
+2023-01-02 13:56:31.269 INFO  (qtp1350751778-44) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 13:56:31.270 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:31.279 INFO  (qtp1350751778-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=10
+2023-01-02 13:56:31.295 INFO  (qtp1350751778-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 13:56:31.295 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:31.297 INFO  (qtp1350751778-20) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:31.306 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=10
+2023-01-02 13:56:31.313 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:34.632 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:34.634 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:34.635 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:34.635 INFO  (Thread-21) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:34.639 INFO  (Thread-21) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:34.640 INFO  (Thread-21) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:34.641 INFO  (Thread-21) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:34.641 INFO  (Thread-21) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:34.647 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:34.674 INFO  (Thread-21) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 32
+2023-01-02 13:56:34.688 INFO  (Thread-21) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2{} 0 56
+2023-01-02 13:56:34.695 ERROR (Thread-21) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:34.695 INFO  (Thread-21) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:34.703 INFO  (Thread-21) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:34.703 INFO  (Thread-21) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:35.612 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:37.153 INFO  (qtp1350751778-26) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:37.156 INFO  (qtp1350751778-26) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:37.157 INFO  (qtp1350751778-26) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=4
+2023-01-02 13:56:37.157 INFO  (Thread-22) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:37.161 INFO  (Thread-22) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:37.163 INFO  (Thread-22) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:37.163 INFO  (Thread-22) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:37.163 INFO  (Thread-22) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:37.169 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:37.196 INFO  (Thread-22) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 32
+2023-01-02 13:56:37.200 INFO  (Thread-22) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=4{} 0 47
+2023-01-02 13:56:37.205 ERROR (Thread-22) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:37.206 INFO  (Thread-22) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:37.212 INFO  (Thread-22) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:37.212 INFO  (Thread-22) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:37.562 INFO  (qtp1350751778-20) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:38.117 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:38.119 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:38.119 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:38.119 INFO  (Thread-23) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:38.124 INFO  (Thread-23) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:38.125 INFO  (Thread-23) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:38.126 INFO  (Thread-23) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:38.126 INFO  (Thread-23) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:38.131 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:56:38.158 INFO  (Thread-23) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 32
+2023-01-02 13:56:38.162 INFO  (Thread-23) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2{} 0 45
+2023-01-02 13:56:38.168 ERROR (Thread-23) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:38.168 INFO  (Thread-23) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:38.175 INFO  (Thread-23) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:38.175 INFO  (Thread-23) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:38.462 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:38.885 INFO  (qtp1350751778-43) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:38.886 INFO  (qtp1350751778-43) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:38.887 INFO  (Thread-24) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:38.887 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:38.890 INFO  (Thread-24) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:38.892 INFO  (Thread-24) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:38.893 INFO  (Thread-24) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:38.893 INFO  (Thread-24) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:38.900 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:56:38.924 INFO  (Thread-24) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 31
+2023-01-02 13:56:38.928 INFO  (Thread-24) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2{} 0 43
+2023-01-02 13:56:38.934 ERROR (Thread-24) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:38.934 INFO  (Thread-24) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:38.940 INFO  (Thread-24) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:38.940 INFO  (Thread-24) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:39.242 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:39.622 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:39.623 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:39.623 INFO  (Thread-25) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:39.623 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:39.628 INFO  (Thread-25) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:39.629 INFO  (Thread-25) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:39.630 INFO  (Thread-25) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:39.630 INFO  (Thread-25) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:39.635 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:56:39.665 INFO  (Thread-25) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 34
+2023-01-02 13:56:39.668 INFO  (Thread-25) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2{} 0 47
+2023-01-02 13:56:39.674 ERROR (Thread-25) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:39.674 INFO  (Thread-25) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:39.679 INFO  (Thread-25) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:39.679 INFO  (Thread-25) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:40.016 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:40.707 INFO  (qtp1350751778-43) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:40.708 INFO  (qtp1350751778-43) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:40.709 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:40.709 INFO  (Thread-26) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:40.713 INFO  (Thread-26) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:40.715 INFO  (Thread-26) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:40.716 INFO  (Thread-26) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:40.716 INFO  (Thread-26) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:40.720 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:56:40.747 INFO  (Thread-26) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 30
+2023-01-02 13:56:40.749 INFO  (Thread-26) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2{} 0 42
+2023-01-02 13:56:40.754 ERROR (Thread-26) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:40.754 INFO  (Thread-26) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:40.761 INFO  (Thread-26) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:40.761 INFO  (Thread-26) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:41.231 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:41.676 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:41.678 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:41.679 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=3
+2023-01-02 13:56:41.679 INFO  (Thread-27) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:41.684 INFO  (Thread-27) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:41.685 INFO  (Thread-27) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:41.686 INFO  (Thread-27) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:41.686 INFO  (Thread-27) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:41.691 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:56:41.721 INFO  (Thread-27) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 34
+2023-01-02 13:56:41.724 INFO  (Thread-27) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=3{} 0 48
+2023-01-02 13:56:41.730 ERROR (Thread-27) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:41.730 INFO  (Thread-27) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:41.738 INFO  (Thread-27) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:41.738 INFO  (Thread-27) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:42.110 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:42.491 INFO  (qtp1350751778-43) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:42.493 INFO  (qtp1350751778-43) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:42.493 INFO  (Thread-28) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:42.493 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:42.498 INFO  (Thread-28) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:42.500 INFO  (Thread-28) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:42.500 INFO  (Thread-28) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:42.500 INFO  (Thread-28) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:42.504 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:56:42.530 INFO  (Thread-28) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 29
+2023-01-02 13:56:42.534 INFO  (Thread-28) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2{} 0 43
+2023-01-02 13:56:42.540 ERROR (Thread-28) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:42.540 INFO  (Thread-28) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:42.546 INFO  (Thread-28) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:42.546 INFO  (Thread-28) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:42.900 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:43.389 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:43.390 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:43.391 INFO  (Thread-29) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:43.391 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:43.395 INFO  (Thread-29) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:43.397 INFO  (Thread-29) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:43.397 INFO  (Thread-29) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:43.397 INFO  (Thread-29) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:43.402 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:43.429 INFO  (Thread-29) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 31
+2023-01-02 13:56:43.432 INFO  (Thread-29) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2{} 0 43
+2023-01-02 13:56:43.438 ERROR (Thread-29) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:43.439 INFO  (Thread-29) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:43.446 INFO  (Thread-29) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:43.446 INFO  (Thread-29) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:43.958 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:44.339 INFO  (qtp1350751778-43) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:44.341 INFO  (qtp1350751778-43) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:44.341 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:44.341 INFO  (Thread-30) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:56:44.345 INFO  (Thread-30) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:44.347 INFO  (Thread-30) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:56:44.347 INFO  (Thread-30) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:56:44.347 INFO  (Thread-30) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:44.353 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:56:44.377 INFO  (Thread-30) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 29
+2023-01-02 13:56:44.381 INFO  (Thread-30) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=2{} 0 42
+2023-01-02 13:56:44.387 ERROR (Thread-30) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:55:47' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:56:44.387 INFO  (Thread-30) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:56:44.395 INFO  (Thread-30) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:56:44.395 INFO  (Thread-30) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:56:44.723 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:56:49.559 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:56:49.561 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:56:49.562 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=2
+2023-01-02 13:56:49.562 INFO  (Thread-31) [   ] o.a.s.h.d.DataImporter Starting Full Import
+2023-01-02 13:56:49.565 INFO  (Thread-31) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:49.566 INFO  (Thread-31) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:56:49.574 INFO  (qtp1350751778-43) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=1
+2023-01-02 13:56:49.600 INFO  (Thread-31) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 33
+2023-01-02 13:56:49.642 INFO  (Thread-31) [   ] o.a.s.h.d.DocBuilder Import completed successfully
+2023-01-02 13:56:49.687 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-01-02 13:56:49.691 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.SolrCore [management3]  Registered new searcher autowarm time: 0 ms
+2023-01-02 13:56:49.702 INFO  (Thread-31) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:56:49.702 INFO  (Thread-31) [   ] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2023-01-02 13:56:49.702 INFO  (Thread-31) [   ] o.a.s.h.d.DocBuilder Time taken = 0:0:0.137
+2023-01-02 13:56:49.702 INFO  (Thread-31) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&_=1672667677603&verbose=false} status=0 QTime=2{add=[99 (1753919321125421056), 102 (1753919321127518208), 103 (1753919321128566784), 244 (1753919321128566785), 5047 (1753919321128566786), 5116 (1753919321129615360), 5190 (1753919321129615361), 5259 (1753919321129615362), 5260 (1753919321130663936), 5261 (1753919321130663937), ... (141 adds)],commit=} 0 143
+2023-01-02 13:56:50.058 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:58:00.793 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 13:58:00.795 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 13:58:00.796 INFO  (Thread-32) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 13:58:00.796 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=3
+2023-01-02 13:58:00.801 INFO  (Thread-32) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 13:58:00.802 INFO  (Thread-32) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 13:58:00.802 INFO  (Thread-32) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 13:58:00.803 INFO  (Thread-32) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 13:58:00.809 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:58:00.844 INFO  (Thread-32) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 41
+2023-01-02 13:58:00.849 INFO  (Thread-32) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672667677603&verbose=false} status=0 QTime=3{} 0 56
+2023-01-02 13:58:00.857 ERROR (Thread-32) [   ] o.a.s.h.d.DataImporter Delta Import Failed => java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:56:49' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275)
+java.lang.RuntimeException: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:56:49' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:275) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.doDeltaImport(DataImporter.java:455) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.runCmd(DataImporter.java:488) ~[?:?]
+	at org.apache.solr.handler.dataimport.DataImporter.lambda$runAsync$0(DataImporter.java:469) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.handler.dataimport.DataImportHandlerException: Unable to execute query: select id from main_task where last_modified > '2023-01-02 13:56:49' Processing Document # 1
+	at org.apache.solr.handler.dataimport.DataImportHandlerException.wrapAndThrow(DataImportHandlerException.java:69) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:329) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'last_modified' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[?:?]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[?:?]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.executeStatement(JdbcDataSource.java:351) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource$ResultSetIterator.<init>(JdbcDataSource.java:323) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.createResultSetIterator(JdbcDataSource.java:290) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:285) ~[?:?]
+	at org.apache.solr.handler.dataimport.JdbcDataSource.getData(JdbcDataSource.java:52) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.initQuery(SqlEntityProcessor.java:59) ~[?:?]
+	at org.apache.solr.handler.dataimport.SqlEntityProcessor.nextModifiedRowKey(SqlEntityProcessor.java:84) ~[?:?]
+	at org.apache.solr.handler.dataimport.EntityProcessorWrapper.nextModifiedRowKey(EntityProcessorWrapper.java:296) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.collectDelta(DocBuilder.java:831) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.doDelta(DocBuilder.java:365) ~[?:?]
+	at org.apache.solr.handler.dataimport.DocBuilder.execute(DocBuilder.java:227) ~[?:?]
+	... 4 more
+2023-01-02 13:58:00.857 INFO  (Thread-32) [   ] o.a.s.u.DirectUpdateHandler2 start rollback{}
+2023-01-02 13:58:00.865 INFO  (Thread-32) [   ] o.a.s.u.DefaultSolrCoreState New IndexWriter is ready to be used.
+2023-01-02 13:58:00.865 INFO  (Thread-32) [   ] o.a.s.u.DirectUpdateHandler2 end_rollback
+2023-01-02 13:59:27.588 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 13:59:55.169 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:03.653 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:04.298 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:04.670 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:04.976 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:05.276 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:05.622 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:05.995 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:06.411 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:06.671 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:06.923 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:07.173 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:07.407 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:07.656 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:07.894 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:08.135 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:08.359 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:08.557 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:08.737 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:12.793 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:13.063 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:13.269 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:13.488 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:13.712 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:13.938 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:14.111 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:14.325 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:14.799 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:14.970 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:15.171 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:15.436 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:15.723 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:15.984 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status} status=0 QTime=0
+2023-01-02 14:00:32.019 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:00:32.049 INFO  (qtp1350751778-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=18
+2023-01-02 14:00:32.050 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1672668032007} status=0 QTime=19
+2023-01-02 14:00:33.029 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:00:33.034 INFO  (qtp1350751778-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=5
+2023-01-02 14:00:34.603 INFO  (qtp1350751778-17) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672667761050} hits=141 status=0 QTime=1
+2023-01-02 14:00:34.645 INFO  (qtp1350751778-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:00:34.647 INFO  (qtp1350751778-22) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672667761050} hits=141 status=0 QTime=0
+2023-01-02 14:00:34.654 INFO  (qtp1350751778-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=8
+2023-01-02 14:00:53.791 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:00:53.794 INFO  (qtp1350751778-17) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1672668032007} status=0 QTime=4
+2023-01-02 14:00:53.799 INFO  (qtp1350751778-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=8
+2023-01-02 14:00:53.804 INFO  (qtp1350751778-22) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/config params={wt=json&_=1672668053778} status=0 QTime=7
+2023-01-02 14:00:53.850 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1672668032007} status=0 QTime=4
+2023-01-02 14:00:55.996 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:00:55.997 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/config params={wt=json&_=1672668053778} status=0 QTime=0
+2023-01-02 14:00:55.999 INFO  (qtp1350751778-22) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1672668032007} status=0 QTime=3
+2023-01-02 14:00:56.003 INFO  (qtp1350751778-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=7
+2023-01-02 14:00:56.028 INFO  (qtp1350751778-21) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1672668032007} status=0 QTime=1
+2023-01-02 14:01:11.181 INFO  (qtp1350751778-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:11.181 INFO  (qtp1350751778-22) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/config params={wt=json&_=1672668053778} status=0 QTime=0
+2023-01-02 14:01:11.183 INFO  (qtp1350751778-21) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1672668032007} status=0 QTime=2
+2023-01-02 14:01:11.187 INFO  (qtp1350751778-43) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=6
+2023-01-02 14:01:11.213 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1672668032007} status=0 QTime=1
+2023-01-02 14:01:13.908 INFO  (qtp1350751778-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:13.910 INFO  (qtp1350751778-18) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/config params={wt=json&_=1672668053778} status=0 QTime=0
+2023-01-02 14:01:13.910 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1672668032007} status=0 QTime=2
+2023-01-02 14:01:13.915 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=6
+2023-01-02 14:01:13.949 INFO  (qtp1350751778-22) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={numTerms=0&wt=json&_=1672668032007} status=0 QTime=1
+2023-01-02 14:01:16.840 INFO  (qtp1350751778-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:16.846 INFO  (qtp1350751778-43) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=5
+2023-01-02 14:01:18.149 INFO  (qtp1350751778-22) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672667761050} hits=141 status=0 QTime=0
+2023-01-02 14:01:18.173 INFO  (qtp1350751778-43) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:18.175 INFO  (qtp1350751778-17) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672667761050} hits=141 status=0 QTime=0
+2023-01-02 14:01:18.181 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=7
+2023-01-02 14:01:41.951 INFO  (qtp1350751778-22) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672667761050} hits=141 status=0 QTime=0
+2023-01-02 14:01:42.520 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672667761050} hits=141 status=0 QTime=0
+2023-01-02 14:01:54.046 INFO  (qtp1350751778-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:54.052 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/replication params={wt=json&command=details&_=1672668114036} status=0 QTime=5
+2023-01-02 14:01:54.054 INFO  (qtp1350751778-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=7
+2023-01-02 14:01:54.366 INFO  (qtp1350751778-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:54.368 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1672668032007} status=0 QTime=2
+2023-01-02 14:01:54.372 INFO  (qtp1350751778-43) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=6
+2023-01-02 14:01:55.241 INFO  (qtp1350751778-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:55.242 INFO  (qtp1350751778-18) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672667677603} status=0 QTime=0
+2023-01-02 14:01:55.247 INFO  (qtp1350751778-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=5
+2023-01-02 14:01:55.261 INFO  (qtp1350751778-43) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:55.262 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672667677603} status=0 QTime=0
+2023-01-02 14:01:55.262 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1672667677603} status=0 QTime=0
+2023-01-02 14:01:55.268 INFO  (qtp1350751778-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=7
+2023-01-02 14:01:55.279 INFO  (qtp1350751778-18) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672667677603} status=0 QTime=0
+2023-01-02 14:01:56.539 INFO  (qtp1350751778-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:56.542 INFO  (qtp1350751778-17) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1672668032007} status=0 QTime=2
+2023-01-02 14:01:56.546 INFO  (qtp1350751778-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=7
+2023-01-02 14:01:57.257 INFO  (qtp1350751778-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:01:57.258 INFO  (qtp1350751778-18) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/file params={wt=json&_=1672668117251} status=0 QTime=0
+2023-01-02 14:01:57.262 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=4
+2023-01-02 14:01:57.273 INFO  (qtp1350751778-22) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/file params={file=conf&wt=json&_=1672668117251} status=0 QTime=2
+2023-01-02 14:01:57.273 INFO  (qtp1350751778-21) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/file params={file=lang&wt=json&_=1672668117251} status=0 QTime=2
+2023-01-02 14:01:57.289 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/file params={file=conf/lang&wt=json&_=1672668117251} status=0 QTime=0
+2023-01-02 14:02:00.096 INFO  (qtp1350751778-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:02:00.098 INFO  (qtp1350751778-17) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1672668032007} status=0 QTime=2
+2023-01-02 14:02:00.104 INFO  (qtp1350751778-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=8
+2023-01-02 14:02:00.742 INFO  (qtp1350751778-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:02:00.745 INFO  (qtp1350751778-24) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1672668032007} status=0 QTime=1
+2023-01-02 14:02:00.746 INFO  (qtp1350751778-21) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/replication params={wt=json&command=details&_=1672668114036} status=0 QTime=1
+2023-01-02 14:02:00.750 INFO  (qtp1350751778-41) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=7
+2023-01-02 14:02:00.754 INFO  (qtp1350751778-17) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1672667677560&ts=1672667677560} status=503 QTime=2
+2023-01-02 14:02:00.762 INFO  (qtp1350751778-20) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/system params={wt=json&_=1672668120734} status=0 QTime=11
+2023-01-02 14:02:41.727 INFO  (qtp1350751778-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:02:41.734 INFO  (qtp1350751778-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=7
+2023-01-02 14:02:45.747 INFO  (qtp1350751778-20) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&fq=id:99&_=1672667761050} hits=1 status=0 QTime=9
+2023-01-02 14:02:45.773 INFO  (qtp1350751778-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672667677560} status=0 QTime=0
+2023-01-02 14:02:45.774 INFO  (qtp1350751778-18) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&fq=id:99&_=1672667761050} hits=1 status=0 QTime=0
+2023-01-02 14:02:45.779 INFO  (qtp1350751778-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672667677560} status=0 QTime=6
+2023-01-02 14:03:22.371 INFO  (JettyShutdownThread) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@781f10f2{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2023-01-02 14:03:22.371 INFO  (JettyShutdownThread) [   ] o.e.j.s.session node0 Stopped scavenging
+2023-01-02 14:03:22.374 INFO  (JettyShutdownThread) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1635358020
+2023-01-02 14:03:22.378 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.c.SolrCore [management3]  CLOSING SolrCore org.apache.solr.core.SolrCore@8b2dc6d
+2023-01-02 14:03:22.378 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.management3 tag=SolrCore@8b2dc6d
+2023-01-02 14:03:22.378 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@69d26e70: rootName = null, domain = solr.core.management3, service url = null, agent id = null] for registry solr.core.management3/com.codahale.metrics.MetricRegistry@17e6d07f
+2023-01-02 14:03:22.391 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-01-02 14:03:22.404 INFO  (JettyShutdownThread) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2023-01-02 14:03:22.404 INFO  (JettyShutdownThread) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@a50d709: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@4e93fa6f
+2023-01-02 14:03:22.408 INFO  (JettyShutdownThread) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2023-01-02 14:03:22.408 INFO  (JettyShutdownThread) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@21ba2445: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@4eb519fa
+2023-01-02 14:03:22.409 INFO  (JettyShutdownThread) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2023-01-02 14:03:22.410 INFO  (JettyShutdownThread) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@69d23296: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@4152aa2f
+2023-01-02 14:03:22.431 INFO  (JettyShutdownThread) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@19fe4644{/solr,null,STOPPED}{/opt/solr-8.11.2/server/solr-webapp/webapp}

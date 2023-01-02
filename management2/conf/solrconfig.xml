@@ -73,6 +73,7 @@
        with their external dependencies.
     -->
     <lib dir="${solr.install.dir:../../../..}/dist/"  />
+    <lib dir="/var/solr/data/management2/lib/"  />
 
   <!-- an exact 'path' can be used instead of a 'dir' to specify a
        specific jar file.  This will cause a serious error to be logged
@@ -764,7 +765,7 @@
        of SearchComponents (see below) and supports distributed
        queries across multiple shards
     -->
-  <requestHandler name="/dataimport" class="org.apache.solr.handler.dataimport.DataImportHandler">
+  <requestHandler name="/dataimport" class="solr.DataImportHandler">
     <lst name="defaults">
       <str name="config">db-data-config.xml</str>
     </lst>

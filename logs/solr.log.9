@@ -1,0 +1,94 @@
+2023-01-02 14:06:45.866 INFO  (main) [   ] o.e.j.u.log Logging initialized @930ms to org.eclipse.jetty.util.log.Slf4jLog
+2023-01-02 14:06:46.074 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 11.0.17+8
+2023-01-02 14:06:46.088 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///opt/solr-8.11.2/server/contexts/] at interval 0
+2023-01-02 14:06:46.302 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2023-01-02 14:06:46.312 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2023-01-02 14:06:46.312 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2023-01-02 14:06:46.315 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
+2023-01-02 14:06:46.369 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2023-01-02 14:06:46.374 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.11.2
+2023-01-02 14:06:46.374 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2023-01-02 14:06:46.374 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /opt/solr
+2023-01-02 14:06:46.374 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2023-01-02T14:06:46.374582Z
+2023-01-02 14:06:46.401 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /var/solr/data
+2023-01-02 14:06:46.401 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /var/solr/data/solr.xml
+2023-01-02 14:06:46.478 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c, but no JMX reporters were configured - adding default JMX reporter.
+2023-01-02 14:06:46.917 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2023-01-02 14:06:47.061 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@39e43310[provider=null,keyStore=null,trustStore=null]
+2023-01-02 14:06:47.061 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@39e43310[provider=null,keyStore=null,trustStore=null]
+2023-01-02 14:06:47.216 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@4743a322[provider=null,keyStore=null,trustStore=null]
+2023-01-02 14:06:47.216 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@4743a322[provider=null,keyStore=null,trustStore=null]
+2023-01-02 14:06:47.268 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2023-01-02 14:06:47.415 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2023-01-02 14:06:47.425 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2023-01-02 14:06:47.489 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c
+2023-01-02 14:06:47.489 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c
+2023-01-02 14:06:47.491 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c
+2023-01-02 14:06:47.519 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/solr/data
+2023-01-02 14:06:47.520 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [management3]
+2023-01-02 14:06:47.569 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.SolrResourceLoader Added 19 libs to classloader, from paths: [/opt/solr/dist, /opt/solr/dist/solrj-lib, /opt/solr/dist/test-framework, /var/solr/data/management2/lib]
+2023-01-02 14:06:47.594 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@19fe4644{/solr,file:///opt/solr-8.11.2/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-8.11.2/server/solr-webapp/webapp}
+2023-01-02 14:06:47.616 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@781f10f2{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2023-01-02 14:06:47.617 INFO  (main) [   ] o.e.j.s.Server Started @2685ms
+2023-01-02 14:06:47.739 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.11.2
+2023-01-02 14:06:47.783 WARN  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.SolrConfig solrconfig.xml: <jmx> is no longer supported, use solr.xml:/metrics/reporter section instead
+2023-01-02 14:06:47.837 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.s.IndexSchema Schema name=default-config
+2023-01-02 14:06:48.123 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2023-01-02 14:06:48.160 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.CoreContainer Creating SolrCore 'management3' using configuration from instancedir /var/solr/data/management2, trusted=true
+2023-01-02 14:06:48.196 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.management3' (registry 'solr.core.management3') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@792b749c
+2023-01-02 14:06:48.211 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.c.SolrCore [[management3] ] Opening new SolrCore at [/var/solr/data/management2], dataDir=[/var/solr/data/management2/data/]
+2023-01-02 14:06:48.747 WARN  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.h.d.DataImportHandler Data Import Handler is deprecated as of Solr 8.6. See SOLR-14066 for more details.
+2023-01-02 14:06:48.770 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2023-01-02 14:06:48.771 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2023-01-02 14:06:48.795 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2023-01-02 14:06:48.796 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2023-01-02 14:06:48.951 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/management2/conf
+2023-01-02 14:06:48.972 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2023-01-02 14:06:48.981 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxQueryFrequency=0.01,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4}
+2023-01-02 14:06:49.002 INFO  (coreLoadExecutor-13-thread-1) [   x:management3] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2023-01-02 14:06:49.028 INFO  (searcherExecutor-15-thread-1-processing-x:management3) [   x:management3] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2023-01-02 14:06:49.028 INFO  (searcherExecutor-15-thread-1-processing-x:management3) [   x:management3] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2023-01-02 14:06:49.041 INFO  (searcherExecutor-15-thread-1-processing-x:management3) [   x:management3] o.a.s.c.SolrCore [management3]  Registered new searcher autowarm time: 0 ms
+2023-01-02 14:06:50.148 INFO  (qtp1350751778-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672668410068} status=0 QTime=13
+2023-01-02 14:06:50.168 INFO  (qtp1350751778-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672668410068} status=0 QTime=29
+2023-01-02 14:06:50.209 INFO  (qtp1350751778-42) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&_=1672668410109} hits=141 status=0 QTime=69
+2023-01-02 14:06:51.425 INFO  (qtp1350751778-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672668410068} status=0 QTime=0
+2023-01-02 14:06:51.425 INFO  (qtp1350751778-42) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672668411412} status=0 QTime=0
+2023-01-02 14:06:51.433 INFO  (qtp1350751778-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672668410068} status=0 QTime=8
+2023-01-02 14:06:51.454 INFO  (qtp1350751778-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1672668410068} status=0 QTime=0
+2023-01-02 14:06:51.454 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1672668411412} status=0 QTime=0
+2023-01-02 14:06:51.469 INFO  (qtp1350751778-21) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1672668411412} status=0 QTime=8
+2023-01-02 14:06:51.469 INFO  (qtp1350751778-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1672668410068} status=0 QTime=15
+2023-01-02 14:06:51.488 INFO  (qtp1350751778-19) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672668411412} status=0 QTime=0
+2023-01-02 14:06:55.212 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Loading DIH Configuration: db-data-config.xml
+2023-01-02 14:06:55.222 INFO  (qtp1350751778-41) [   x:management3] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2023-01-02 14:06:55.235 INFO  (Thread-14) [   ] o.a.s.h.d.DataImporter Starting Delta Import
+2023-01-02 14:06:55.236 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672668411412&verbose=false} status=0 QTime=24
+2023-01-02 14:06:55.248 INFO  (qtp1350751778-18) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672668411412} status=0 QTime=0
+2023-01-02 14:06:55.257 INFO  (Thread-14) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2023-01-02 14:06:55.295 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Starting delta collection.
+2023-01-02 14:06:55.306 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Running ModifiedRowKey() for Entity: task
+2023-01-02 14:06:55.308 INFO  (Thread-14) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity task with URL: jdbc:mysql://172.25.197.100:3700/management
+2023-01-02 14:06:55.653 INFO  (Thread-14) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 344
+2023-01-02 14:06:55.675 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Completed ModifiedRowKey for Entity: task rows obtained: 0
+2023-01-02 14:06:55.675 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Completed DeletedRowKey for Entity: task rows obtained : 0
+2023-01-02 14:06:55.675 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Completed parentDeltaQuery for Entity: task
+2023-01-02 14:06:55.676 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Delta Import completed successfully
+2023-01-02 14:06:55.677 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Time taken = 0:0:0.419
+2023-01-02 14:06:55.677 INFO  (Thread-14) [   ] o.a.s.u.p.LogUpdateProcessorFactory [management3]  webapp=/solr path=/dataimport params={core=management3&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=delta-import&_=1672668411412&verbose=false} status=0 QTime=24{} 0 465
+2023-01-02 14:07:04.041 INFO  (qtp1350751778-41) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672668411412} status=0 QTime=1
+2023-01-02 14:07:15.531 INFO  (qtp1350751778-18) [   x:management3] o.a.s.c.S.Request [management3]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1672668411412} status=0 QTime=0
+2023-01-02 14:12:05.480 INFO  (JettyShutdownThread) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@781f10f2{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2023-01-02 14:12:05.480 INFO  (JettyShutdownThread) [   ] o.e.j.s.session node0 Stopped scavenging
+2023-01-02 14:12:05.484 INFO  (JettyShutdownThread) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1635358020
+2023-01-02 14:12:05.491 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.c.SolrCore [management3]  CLOSING SolrCore org.apache.solr.core.SolrCore@385f2bed
+2023-01-02 14:12:05.491 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.management3 tag=SolrCore@385f2bed
+2023-01-02 14:12:05.492 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@6e410ad1: rootName = null, domain = solr.core.management3, service url = null, agent id = null] for registry solr.core.management3/com.codahale.metrics.MetricRegistry@13aa2189
+2023-01-02 14:12:05.529 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2023-01-02 14:12:05.569 INFO  (JettyShutdownThread) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2023-01-02 14:12:05.569 INFO  (JettyShutdownThread) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@9b9a327: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@410ed8e
+2023-01-02 14:12:05.573 INFO  (JettyShutdownThread) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2023-01-02 14:12:05.573 INFO  (JettyShutdownThread) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@17461db: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@611ffa0a
+2023-01-02 14:12:05.576 INFO  (JettyShutdownThread) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2023-01-02 14:12:05.576 INFO  (JettyShutdownThread) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@3fd9e827: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@31bf5996
+2023-01-02 14:12:05.599 INFO  (JettyShutdownThread) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@19fe4644{/solr,null,STOPPED}{/opt/solr-8.11.2/server/solr-webapp/webapp}
